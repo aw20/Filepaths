@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>File Paths</title>
+
+		<script src="jquery.1.6.4.min.js"></script>
+		<script src="../src/aw20.filepaths.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				$('.file.path').filepaths();
+			});
+		</script>
+
+
+		<style>
+
+			body {
+				padding: 30px 0;
+				text-align: center;
+			}
+
+
+
+			table.queries { background: #f7f7f7; margin: 0 0 10px 0; border-top: 1px solid #ccc; border-left: 1px solid #ccc; font-family: Verdana, arial; cursor: default; margin: 0 auto; text-align: left;}
+			table.queries tr:nth-child(even) { background: #ebebeb; }
+			table.queries tr:hover { background: #e3e3e3; }
+			table.queries th, table.queries td { padding: 8px 5px; border-bottom: 1px solid #ccc; border-right: 1px solid #ccc; font-size: 12px; line-height: 15px; }
+			table.queries .file { color: #888; font-size: 11px; }
+			table.queries .sql { color: green; font-size: 11px; }
+			table.queries td { vertical-align: top; }
+
+		</style>
+	
+</head>
+<body>
+
+
+<h2>File Paths Exmaple</h2>
+
+<p>
+	A little plugin to shorten filepaths, also adjust length of path on window resize
+</p>
+
+
+
+			<table class="queries" width="70%">		
+			<tbody>	
+			<tr>
+				<td width="40%">/alantest/db.cfm
+					<div class="file path">template: E:/OpenBD/openbd/webapp/alantest/db.cfm</div>
+				</td>
+				<td width="50px">127.0.0.1</td>
+				<td width="50px" style="text-align: right;" nowrap="nowrap">1,090,758<div class="file"><strong>ms</strong></div></td>
+				<td width="50px" style="text-align: right;">63,822<div class="file"><strong>bytes</strong></div></td>
+				<td>
+					<div class="sqltime">CFQUERY; ExecTime: 144580 <span class="file">ms</span></div>
+					<div class="sql">select now(), Sleep(20)</div>
+			 	</td>
+			</tr>
+			<tr class="inspect"><td colspan="5">
+				<div class="inspectbox">
+						<p>
+							 SELECT ACCOUNT.NAME AS ACCOUNT_NAME, ACCOUNT.ID AS ACCOUNT_ID, ACCOUNT__C, CONTACT__C, END_DATE__C, P.NAME, P.ID, START_DATE__C, TITLE__C 
+
+							 FROM PREVIOUS_EMPLOYMENT__C P
+
+							 JOIN ACCOUNT ON P.ACCOUNT__C = ACCOUNT.ID
+
+							 WHERE CONTACT__C = '#arguments.contactid#'
+						</p>
+				</div>
+			</td>
+			</tr>					
+			</tbody>
+			</table>
+
+
+			<table class="queries" width="70%">		
+			<tbody>	
+			<tr>
+				<td width="40%">/alantest/db.cfm
+					<div class="file path">template: E:/Projects/Sample/webapps/db/mysql/tasks/db.cfm</div>
+				</td>
+				<td width="50px">127.0.0.1</td>
+				<td width="50px" style="text-align: right;" nowrap="nowrap">1,090,758<div class="file"><strong>ms</strong></div></td>
+				<td width="50px" style="text-align: right;">63,822<div class="file"><strong>bytes</strong></div></td>
+				<td>
+					<div class="sqltime">CFQUERY; ExecTime: 144580 <span class="file">ms</span></div>
+					<div class="sql">select now(), Sleep(20)</div>
+			 	</td>
+			</tr>
+			<tr class="inspect"><td colspan="5">
+				<div class="inspectbox">
+						<p>
+							 SELECT ACCOUNT.NAME AS ACCOUNT_NAME, ACCOUNT.ID AS ACCOUNT_ID, ACCOUNT__C, CONTACT__C, END_DATE__C, P.NAME, P.ID, START_DATE__C, TITLE__C 
+
+							 FROM PREVIOUS_EMPLOYMENT__C P
+
+							 JOIN ACCOUNT ON P.ACCOUNT__C = ACCOUNT.ID
+
+							 WHERE CONTACT__C = '#arguments.contactid#'
+						</p>
+				</div>
+			</td>
+			</tr>					
+			</tbody>
+			</table>
+
+
+			<table class="queries" width="70%">		
+			<tbody>	
+			<tr>
+				<td width="40%">/alantest/db.cfm
+					<div class="file path">template: E:/test/db.cfm</div>
+				</td>
+				<td width="50px">127.0.0.1</td>
+				<td width="50px" style="text-align: right;" nowrap="nowrap">1,090,758<div class="file"><strong>ms</strong></div></td>
+				<td width="50px" style="text-align: right;">63,822<div class="file"><strong>bytes</strong></div></td>
+				<td>
+					<div class="sqltime">CFQUERY; ExecTime: 144580 <span class="file">ms</span></div>
+					<div class="sql">select now(), Sleep(20)</div>
+			 	</td>
+			</tr>
+			<tr class="inspect"><td colspan="5">
+				<div class="inspectbox">
+						<p>
+						 SELECT ACCOUNT.NAME AS ACCOUNT_NAME, ACCOUNT.ID AS ACCOUNT_ID, ACCOUNT__C, CONTACT__C, END_DATE__C, P.NAME, P.ID, START_DATE__C, TITLE__C 
+
+						 FROM PREVIOUS_EMPLOYMENT__C P
+
+						 JOIN ACCOUNT ON P.ACCOUNT__C = ACCOUNT.ID
+
+						 WHERE CONTACT__C = '#arguments.contactid#'
+						</p>
+				</div>
+			</td>
+			</tr>					
+			</tbody>
+			</table>			
+
+
+			
+
+</body>
+
+</html>
